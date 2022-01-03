@@ -51,7 +51,7 @@ export interface UpvoteProps {
     score: number;
     title: string;
     postId: string;
-    boardName: string;
+    subTitle: string;
     url: string;
     email: string;
 }
@@ -77,7 +77,8 @@ const createVote = (url: string, email: string, postID: string, voterID: string)
         );
 };
 
-const Upvote: React.FC<UpvoteProps> = ({ url, postId, score, title, boardName, email }) => {
+const Upvote: React.FC<UpvoteProps> = ({ url, postId, score, title, subTitle, email }) => {
+    console.log('subTitle ', subTitle);
     const upvote = useCallback(() => {
         fetch(url, {
             method: 'POST',
@@ -106,9 +107,9 @@ const Upvote: React.FC<UpvoteProps> = ({ url, postId, score, title, boardName, e
                     <UpvoteIcon />
                     <span>{score}</span>
                 </div>
-                <div className="item justify-start flex flex-col items-center items-baseline">
+                <div className="item justify-start flex flex-col">
                     <div className="title font-bold">{title}</div>
-                    <div className="ParentName font-bold uppercase text-base">{boardName}</div>
+                    <div className="ParentName font-bold uppercase text-base">{subTitle}</div>
                 </div>
             </ColumnListItem>
         </div>
@@ -118,7 +119,7 @@ Upvote.propTypes = {
     score: PropTypes.number.isRequired,
     postId: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    boardName: PropTypes.string.isRequired,
+    subTitle: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
 };

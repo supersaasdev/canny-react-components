@@ -87,3 +87,23 @@
 .items-center{
   align-items: center;
 }
+
+.grow{
+  flex-grow: 1;
+}
+
+.f14{
+  font-size: 14px;
+}
+
+.mrp4{
+  margin-right: 0.4rem;
+}
+
+.p10{
+  padding: 10px;
+}
+
+.mt10{
+  margin-top: 10px;
+}

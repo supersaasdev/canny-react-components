@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes, { string } from 'prop-types';
+import PropTypes from 'prop-types';
 import { uuid } from 'uuidv4';
 import groupBy from 'lodash/groupBy';
 import styled from 'styled-components';
@@ -116,7 +116,7 @@ const Roadmap: React.FC<RoadmapProps> = ({ url, sortBy, currentUser, limit }) =>
                                             postId={_postItem.id}
                                             score={_postItem.score}
                                             title={_postItem.title}
-                                            boardName={_postItem.board.name}
+                                            subTitle={_postItem.board.name}
                                         ></Upvote>
                                     </div>
                                 );
