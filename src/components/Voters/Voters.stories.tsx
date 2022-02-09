@@ -12,7 +12,7 @@ const Template: Story<VotersProps> = (args) => <Voters {...args} />;
 
 export const Board = Template.bind({});
 Board.args = {
-    url: 'https://lambdaapi.superopsalpha.com/sync',
+    url: '',
     postId: '6089a5ccc314133780617f52',
     currentUser: {
         email: 'iamcsk90@gmail.com',
