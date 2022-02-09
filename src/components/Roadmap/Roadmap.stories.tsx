@@ -13,7 +13,7 @@ const Template: Story<RoadmapProps> = (args) => <Roadmap {...args} />;
 export const Board = Template.bind({});
 Board.args = {
     type: 'list',
-    url: 'https://lambdaapi.superopsalpha.com/sync',
+    url: '',
     currentUser: {
         email: 'iamcsk90@gmail.com',
     },
