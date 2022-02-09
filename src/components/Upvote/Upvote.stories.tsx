@@ -12,6 +12,6 @@ const Template: Story<UpvoteProps> = (args) => <Upvote {...args} />;
 
 export const Board = Template.bind({});
 Board.args = {
-    url: 'https://lambdaapi.superopsalpha.com/sync',
+    url: '',
     email: 'iamcsk90@gmail.com',
 };
